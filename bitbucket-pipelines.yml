@@ -6,6 +6,6 @@ pipelines:
         clone:
           enabled: false
         script:
-          - git clone --bare git@github.com:fenosoa-rhj/test_pipeline.git
+          - git clone --bare git@bitbucket.org:yitf/test-github-mirror.git
           - cd RepoName.git
           - git push --mirror git@github.com:fenosoa-rhj/test_pipeline.git
