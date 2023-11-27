@@ -8,4 +8,4 @@ pipelines:
         script:
           - git clone --bare git@bitbucket.org:yitf/test-github-mirror.git
           - cd test-github-mirror.git
-          - git push --mirror git@github.com:fenosoa-rhj/test_pipeline.git
+          - git push BITBUCKET_BRANCH git@github.com:fenosoa-rhj/test_pipeline.git
