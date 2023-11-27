@@ -8,4 +8,4 @@ pipelines:
         script:
           - git clone --bare git@bitbucket.org:yitf/test-github-mirror.git
           - cd test-github-mirror.git
-          - git push git@github.com:fenosoa-rhj/test_pipeline.git $BITBUCKET_BRANCH:$BITBUCKET_BRANCH
+          - if [[ $BITBUCKET_BRANCH = ALLOW* ]]; then git push git@github.com:fenosoa-rhj/test_pipeline.git $BITBUCKET_BRANCH:$BITBUCKET_BRANCH ; else echo "Push revoked"; fi 
